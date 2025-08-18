@@ -12,5 +12,5 @@ on:
           steps:
             - name: git clone
               uses: actions/checkout@v2
-             - name: Read hello.txt file
+            - name: Read hello.txt file
               run: cat hello.txt
