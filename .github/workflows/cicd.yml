@@ -17,3 +17,17 @@ jobs:
 
       - name: Read hello.txt file
         run: cat hello.txt
+
+  build:
+    needs: read_hello_file
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: set up node js.
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      
